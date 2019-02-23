@@ -1,2 +1,2 @@
-# trishamittal.github.io
-Harsh Agrawal - Personal Website
+# http://www.cs.umd.edu/~trisha/
+Trisha Mittal - Personal Website

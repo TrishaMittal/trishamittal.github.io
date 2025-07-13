@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Trisha Mittal - Publications</title>
+    <link href="css/bootstrap.css?v=1" rel="stylesheet">
+    <link href="css/timeline.css?v=1" rel="stylesheet">
+    <link href="css/freelancer.css?v=1" rel="stylesheet">
+    <link href="css/multipage.css?v=1" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css">
+    <script src="js/modernizr.js"></script>
+</head>
+
+<body id="page-top" class="index">
+    <!-- Overlay for abstract popups -->
+    <div id="overlay" class="overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Home</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="publications.html">Research</a></li>
+                    <li><a href="experience.html">Bio</a></li>
+                    <li><a href="professional-engagement.html">Professional Engagements</a></li>
+                    <li><a href="fun-things.html">Fun Things</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="anchor" id="publications"></div>
+    <section>
+        <div class="container">
+            <div class="container-fluid">
+                <div class="pub-tabs" style="display: flex; justify-content: space-between; align-items: stretch; margin: 20px 0;">
+                    <button class="pub-tab-btn active" onclick="showPubTheme('behavior')">Understanding Human Behavior</button>
+                    <button class="pub-tab-btn" onclick="showPubTheme('content')">Multimodal Content Reasoning</button>
+                    <button class="pub-tab-btn" onclick="showPubTheme('influence')">Estimating Influence of Training Datasets</button>
+                    <button class="pub-tab-btn" onclick="showPubTheme('perception')">Understanding Human Perception</button>
+                </div>
+            </div>
+
+            <!-- Estimating Influence of Training Datasets -->
+            <div id="influence" class="pub-theme-content active">
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/conceptcoreset.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Model-agnostic Coreset Selection via LLM-based Concept Bottlenecks</h4>
+                        <span> <font color="blue"> Dolby Laboratories, Inc.</font></span>
+                        <h4 class="puba">Akshay Mehra<sup>*</sup>, <b>Trisha Mittal<sup>*</sup></b>, Subhadra Gopalakrishnan, Joshua Kimball</h4>
+                        <div class="pubv">Arxiv</div>
+                        <div class="pubv">CVPR 2025 Workshop on Visual Concepts</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://arxiv.org/pdf/2502.16733">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-influence-1', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-influence-1" class="abstract-content">
+                            <p>Coreset Selection (CS) aims to identify a subset of the training dataset that achieves model performance comparable to using the entire dataset. Many state-of-the-art CS methods select coresets using scores whose computation requires training the downstream model on the entire dataset first and recording changes in the model's behavior on samples as it trains (training dynamics). These scores are inefficient to compute and hard to interpret, as they do not indicate whether a sample is difficult to learn in general or only for a specific downstream model. Our work addresses these challenges by proposing a score that computes a sample's difficulty using human-understandable textual attributes (concepts) independent of any downstream model. Specifically, we measure the alignment between a sample's visual features and concept bottlenecks, derived via large language models, by training a linear concept bottleneck layer and computing the sample's difficulty score using it. We then use stratified sampling based on this score to generate a coreset of the dataset. Crucially, our score is efficiently computable without training the downstream model on the full dataset even once, leads to high-performing coresets for various downstream models, and is computable even for an unlabeled dataset. Through experiments on CIFAR-10/100, and ImageNet-1K, we show that our coresets outperform random subsets, even at high pruning rates, and achieve model performance comparable to or better than coresets found by training dynamics-based methods.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Understanding Human Perception -->
+            <div id="perception" class="pub-theme-content">
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/realfakeface.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Analysis of Human Perception in Distinguishing Real and AI-Generated Faces: An Eye-Tracking Based Study</h4>
+                        <span> <font color="blue"> Dolby Laboratories, Inc.</font></span>
+                        <h4 class="puba">Jin Huang, Subhadra Gopalakrishnan, <b>Trisha Mittal</b>, Jake Zuena, Jaclyn Pytlarz</h4>
+                        <div class="pubv">The 19th IEEE International Conference on Automatic Face and Gesture Recognition (FG 2025)</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://arxiv.org/pdf/2409.15498">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-perception-1', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-perception-1" class="abstract-content">
+                            <p>Recent advancements in Artificial Intelligence have led to remarkable improvements in generating realistic human faces. While these advancements demonstrate significant progress in generative models, they also raise concerns about the potential misuse of these generated images. In this study, we investigate how humans perceive and distinguish between real and fake images. We designed a perceptual experiment using eye-tracking technology to analyze how individuals differentiate real faces from those generated by AI. Our analysis of StyleGAN-3 generated images reveals that participants can distinguish real from fake faces with an average accuracy of 76.80%. Additionally, we found that participants scrutinize images more closely when they suspect an image to be fake. We believe this study offers valuable insights into human perception of AI-generated media.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Understanding Human Behavior -->
+            <div id="behavior" class="pub-theme-content">
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/taew.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Assisted Inverse Reinforcement Learning</h4>
+                        <h4 class="puba">P. Kamalaruban, R. Devidze, T. Yeo, <b>Trisha Mittal</b>, V. Cevher, A. Singla</h4>
+                        <div class="pubv">NeurIPS 2018 Workshop on Learning by Instruction</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://drive.google.com/file/d/1imsyXZAk98cxQShNN2FvemPi-6X1A4aq/view?usp=sharing">PDF</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-influence-2', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-influence-2" class="abstract-content">
+                            <p>We study the problem of inverse reinforcement learning (IRL) with the added twist that the learner is assisted by a helpful teacher. More formally, we tackle the following question: How could a teacher provide an informative sequence of demonstrations to an IRL agent to speed up the learning process? We prove rigorous convergence guarantees of a new iterative teaching algorithm that adaptively chooses demonstrations based on the learner's current performance. Extensive experiments with a car driving simulator environment show that the learning progress can be speeded up drastically as compared to an uninformative teacher.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/m3er.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">M3ER: Multiplicative Multimodal Emotion Recognition Using Facial, Textual, and Speech Cues</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">AAAI 2020</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://ojs.aaai.org/index.php/AAAI/article/view/5492">Paper</a></li>
+                                <li><a href="https://www.gamma.umd.edu/m3er/">Project Page</a></li>
+                                <li><a href="https://youtu.be/GEklunW5S6U">Video</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-1', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-1" class="abstract-content">
+                            <p>We present M3ER, a learning-based method for emotion recognition from multiple input modalities. Our approach combines cues from multiple co-occurring modalities (such as face, text, and speech) and also is more robust than other methods to sensor noise in any of the individual modalities. M3ER models a novel, data-driven multiplicative fusion method to combine the modalities, which learn to emphasize the more reliable cues and suppress others on a per sample basis. By introducing a check step which uses Canonical Correlational Analysis to differentiate between ineffective and effective modalities, M3ER is robust to sensor noise. M3ER also generates proxy features in place of the ineffectual modalities. We demonstrate the efficiency of our network through experimentation on two benchmark datasets, IEMOCAP and CMU-MOSEI. We report a mean accuracy of 82.7% on IEMOCAP and 89.0% on CMU-MOSEI, which, collectively, is an improvement of about 5% over prior work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/emoticon.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">EmotiCon: Context-Aware Multimodal Emotion Recognition using Frege's Principle</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">CVPR 2020</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://openaccess.thecvf.com/content_CVPR_2020/papers/Mittal_EmotiCon_Context-Aware_Multimodal_Emotion_Recognition_Using_Freges_Principle_CVPR_2020_paper.pdf">Paper</a></li>
+                                <li><a href="https://www.gamma.umd.edu/emoticon/">Project Page</a></li>
+                                <li><a href="https://youtu.be/Zy8yG52EUj4">Video</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-2', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-2" class="abstract-content">
+                            <p>We present EmotiCon, a learning-based algorithm for context-aware perceived human emotion recognition from videos and images. Motivated by Frege's Context Principle from psychology, our approach combines three interpretations of context for emotion recognition. Our first interpretation is based on using multiple modalities (e.g. faces and gaits) for emotion recognition. For the second interpretation, we gather semantic context from the input image and use a self-attention-based CNN to encode this information. Finally, we use depth maps to model the third interpretation related to socio-dynamic interactions and proximity among agents. We demonstrate the efficiency of our network through experiments on EMOTIC, a benchmark dataset. We report an Average Precision (AP) score of 35.48 across 26 classes, which is an improvement of 7-8 over prior methods. We also introduce a new dataset, GroupWalk, which is a collection of videos captured in multiple real-world settings of people walking. We report an AP of 65.83 across 4 categories on GroupWalk, which is also an improvement over prior methods.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/m3er.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Multimodal and Context-Aware Emotion Perception Model with Multiplicative Fusion</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2022</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://ieeexplore.ieee.org/document/9714137">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-3', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-3" class="abstract-content">
+                            <p>We present a multimodal and context-aware emotion perception model that combines cues from multiple co-occurring modalities (such as face, text, and speech) and is robust to sensor noise in any of the individual modalities. Our approach uses a novel, data-driven multiplicative fusion method to combine the modalities, which learns to emphasize the more reliable cues and suppress others on a per sample basis. By introducing a check step which uses Canonical Correlational Analysis to differentiate between ineffective and effective modalities, our model is robust to sensor noise. We also generate proxy features in place of the ineffectual modalities. We demonstrate the efficiency of our network through experimentation on multiple benchmark datasets and report significant improvements over prior work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/intent.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Towards Determining Perceived Human Intent for Multimodal Social Media Posts using The Theory of Reasoned Action</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">Nature Scientific Reports 2024</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://gamma.umd.edu/researchdirections/affectivecomputing/emotionrecognition/intent_o_meter">Project Page</a></li>
+                                <li><a href="https://arxiv.org/pdf/2409.15498">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-4', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-4" class="abstract-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/headmotion.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Naturalistic Head Motion Generation from Speech</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2023</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://arxiv.org/pdf/2302.12660.pdf">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-5', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-5" class="abstract-content">
+                            <p>Synthesizing natural head motion to accompany speech for an embodied conversational agent is necessary for providing a rich interactive experience. Most prior works assess the quality of generated head motion by comparing them against a single ground-truth using an objective metric. Yet there are many plausible head motion sequences to accompany a speech utterance. In this work, we study the variation in the perceptual quality of head motions sampled from a generative model. We show that, despite providing more diverse head motions, the generative model produces motions with varying degrees of perceptual quality. We finally show that objective metrics commonly used in previous research do not accurately reflect the perceptual quality of generated head motions. These results open an interesting avenue for future work to investigate better objective metrics that correlate with human perception of quality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/step.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">STEP: Spatial Temporal Graph Convolutional Networks for Emotion Perception from Gaits</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">AAAI 2017</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://ojs.aaai.org/index.php/AAAI/article/view/5490">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-6', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-6" class="abstract-content">
+                            <p>We present a novel classifier network called STEP, to classify perceived human emotion from gaits, based on a Spatial Temporal Graph Convolutional Network (ST-GCN) architecture. Given an RGB video of an individual walking, our formulation implicitly exploits the gait features to classify the emotional state of the human into one of four emotions: happy, sad, angry, or neutral. We use hundreds of annotated real-world gait videos and augment them with thousands of annotated synthetic gaits generated using a novel generative network called STEP-Gen, built on an ST-GCN based Conditional Variational Autoencoder (CVAE). We incorporate a novel push-pull regularization loss in the CVAE formulation of STEP-Gen to generate realistic gaits and improve the classification accuracy of STEP. We also release a novel dataset (E-Gait), which consists of 2,177 human gaits annotated with perceived emotions along with thousands of synthetic gaits. In practice, STEP can learn the affective features and exhibits classification accuracy of 89% on E-Gait, which is 14 - 30% more accurate over prior methods.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/emotive-gaits.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Take an Emotion Walk: Perceiving Emotions from Gaits Using Hierarchical Attention Pooling and Affective Mapping</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">CVPR 2019</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://arxiv.org/pdf/1911.08708.pdf">Paper</a></li>
+                                <li><a href="https://gamma.umd.edu/taew">Project Page</a></li>
+                                <li><a href="https://youtu.be/5S1Rh5B06T8">Video</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-7', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-7" class="abstract-content">
+                            <p>We present an autoencoder-based semi-supervised approach to classify perceived human emotions from walking styles obtained from videos or motion-captured data and represented as sequences of 3D poses. Given the motion on each joint in the pose at each time step extracted from 3D pose sequences, we hierarchically pool these joint motions in a bottom-up manner in the encoder, following the kinematic chains in the human body. We also constrain the latent embeddings of the encoder to contain the space of psychologically-motivated affective features underlying the gaits. We train the decoder to reconstruct the motions per joint per time step in a top-down manner from the latent embeddings. For the annotated data, we also train a classifier to map the latent embeddings to emotion labels. Our semi-supervised approach achieves a mean average precision of 0.84 on the Emotion-Gait benchmark dataset, which contains both labeled and unlabeled gaits collected from multiple sources. We outperform current state-of-art algorithms for both emotion recognition and action recognition from 3D gaits by 7%--23% on the absolute. More importantly, we improve the average precision by 10%--50% on the absolute on classes that each makes up less than 25% of the labeled part of the Emotion-Gait benchmark dataset.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/gen_emotive_gaits.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Generating Emotive Gaits for Virtual Agents Using Affect-Based Autoregression</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">AAAI 2018</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://arxiv.org/pdf/2010.01615.pdf">Paper</a></li>
+                                <li><a href="https://gamma.umd.edu/gen_emotive_gaits/">Project Page</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-8', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-8" class="abstract-content">
+                            <p>We present a novel autoregression network to generate virtual agents that convey various emotions through their walking styles or gaits. Given the 3D pose sequences of a gait, our network extracts pertinent movement features and affective features from the gait. We use these features to synthesize subsequent gaits such that the virtual agents can express and transition between emotions represented as combinations of happy, sad, angry, and neutral. We incorporate multiple regularizations in the training of our network to simultaneously enforce plausible movements and noticeable emotions on the virtual agents. We also integrate our approach with an AR environment using a Microsoft HoloLens and can generate emotive gaits at interactive rates to increase the social presence. We evaluate how human observers perceive both the naturalness and the emotions from the generated gaits of the virtual agents in a web-based study. Our results indicate around 89% of the users found the naturalness of the gaits satisfactory on a five-point Likert scale, and the emotions they perceived from the virtual agents are statistically similar to the intended emotions of the virtual agents.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/cmetric.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">CMetric: A Driving Behavior Measure using Centrality Functions</h4>
+                        <h4 class="puba">Rohan Chandra, Uttaran Bhattacharya, <b>Trisha Mittal</b>, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">IROS 2020</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aNztanEAAAAJ&citation_for_view=aNztanEAAAAJ:W7OEmFMy1HYC">Paper</a></li>
+                                <li><a href="https://gamma.umd.edu/cmetric">Project Page</a></li>
+                                <li><a href="https://youtu.be/OSNB2nQGHBg">Video</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-9', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-9" class="abstract-content">
+                            <p>We present a new measure, CMetric, to classify driver behaviors using centrality functions. Our formulation combines concepts from computational graph theory and social traffic psychology to quantify and classify the behavior of human drivers. CMetric is used to compute the probability of a vehicle executing a driving style, as well as the intensity used to execute the style. Our approach is designed for realtime autonomous driving applications, where the trajectory of each vehicle or road-agent is extracted from a video. We compute a dynamic geometric graph (DGG) based on the positions and proximity of the road-agents and centrality functions corresponding to closeness and degree. These functions are used to compute the CMetric based on style likelihood and style intensity estimates. Our approach is general and makes no assumption about traffic density, heterogeneity, or how driving behaviors change over time.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/forecast.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Forecasting Trajectory and Behavior of Road-Agents Using Spectral Clustering in Graph-LSTMs</h4>
+                        <h4 class="puba">Rohan Chandra, Tianrui Guan, Srujan Panuganti, <b>Trisha Mittal</b>, Uttaran Bhattacharya, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">RAL/IROS 2020</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://arxiv.org/pdf/1912.01118.pdf">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-10', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-10" class="abstract-content">
+                            <p>We present a novel approach to predict trajectories of road-agents in dense traffic scenes using a combination of spectral clustering and deep learning. Our approach is designed for heterogeneous traffic, where different road agents such as cars, buses, pedestrians, two-wheelers, etc. follow different motion patterns. We model the interactions between road agents using a weighted dynamic geometric graph (DGG) and compute the spatio-temporal relationships between them using a novel algorithm based on spectral clustering. We use these clusters to classify the behavior of each road agent and combine them with a long short-term memory (LSTM) deep learning network to predict their trajectories. We evaluate the performance of our prediction algorithm, Spectral-LSTM, on the TRAF dataset and observe that it outperforms state-of-the-art methods by 30%.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/graphrqi.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">GraphRQI: Classifying Driver Behaviors Using Graph Spectrums</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">AAAI 2016</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://ieeexplore.ieee.org/abstract/document/9196751">Paper</a></li>
+                                <li><a href="https://gamma.umd.edu/researchdirections/autonomousdriving/graphrqi">Project Page</a></li>
+                                <li><a href="https://youtu.be/pndG0mnsyQU">Video</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-behavior-11', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-behavior-11" class="abstract-content">
+                            <p>We present a novel algorithm (GraphRQI) to identify driver behaviors from road-agent trajectories. Our approach assumes that the road-agents exhibit a range of driving traits, such as aggressive or conservative driving. Moreover, these traits affect the trajectories of nearby road-agents as well as the interactions between road-agents. We represent these inter-agent interactions using unweighted and undirected traffic graphs. Our algorithm classifies the driver behavior using a supervised learning algorithm by reducing the computation to the spectral analysis of the traffic graph. Moreover, we present a novel eigenvalue algorithm to compute the spectrum efficiently. We provide theoretical guarantees for the running time complexity of our eigenvalue algorithm and show that it is faster than previous methods by 2 times. We evaluate the classification accuracy of our approach on traffic videos and autonomous driving datasets corresponding to urban traffic. In practice, GraphRQI achieves an accuracy improvement of up to 25% over prior driver behavior classification algorithms.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Multimodal Content Reasoning -->
+            <div id="content" class="pub-theme-content">
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/videosham.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Emotion's Don't Lie: A DeepFake Detection Method using Audio-Visual Affective Cues</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">AAAI 2021</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://arxiv.org/pdf/2003.06711.pdf">Paper</a></li>
+                                <li><a href="https://www.gamma.umd.edu/deepfakes">Project Page</a></li>
+                                <li><a href="https://youtu.be/wA2wBYdQPf0">Video</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-content-1', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-content-1" class="abstract-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/affect2mm.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Affect2MM: Affective Analysis of Multimedia Content Using Emotion Causality</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">CVPR 2021</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://openaccess.thecvf.com/content/CVPR2021/papers/Mittal_Affect2MM_Affective_Analysis_of_Multimedia_Content_Using_Emotion_Causality_CVPR_2021_paper.pdf">Paper</a></li>
+                                <li><a href="https://gamma.umd.edu/affect2mm">Project Page</a></li>
+                                <li><a href="https://youtu.be/JZMBc9oWTvg">Video</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-content-2', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-content-2" class="abstract-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/bohance.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">BOhance: Bayesian Optimization for Content Enhancement</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Avinash Paliwal, Divyanshu Aggarwal, Sumit Shekhar</h4>
+                        <div class="pubv">ACM Multimedia 2022</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=9666108">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-content-3', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-content-3" class="abstract-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/deepfakes.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Video Manipulations Beyond Faces: A Dataset with Human-Machine Analysis</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI) 2023</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://openaccess.thecvf.com/content/WACV2023W/MAP-A/papers/Mittal_Video_Manipulations_Beyond_Faces_A_Dataset_With_Human-Machine_Analysis_WACVW_2023_paper.pdf">Paper</a></li>
+                                <li><a href="https://github.com/adobe-research/VideoSham-dataset">Dataset</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-content-4', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-content-4" class="abstract-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/viz.jpg" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">Pictionary-style Word Guessing on Hand-drawn Object Sketches: Dataset, Analysis and Deep Network Models</h4>
+                        <h4 class="puba">Ravi Kiran Sarvadevabhatla, Shiv Surya, <b>Trisha Mittal</b>, R. Venkatesh Babu</h4>
+                        <div class="pubv">AAAI 2018</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://ieeexplore.ieee.org/abstract/document/8509167">PDF</a></li>
+                                <li><a href="https://timesofindia.indiatimes.com/home/science/social-games-new-ai-model-to-aid-future-robots-fit-in-our-settings/articleshow/66882227.cms">The Times of India</a></li>
+                                <li><a href="https://github.com/val-iisc/sketchguess">Code</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-content-5', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-content-5" class="abstract-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/s2mgen.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">S2MGen: A Synthetic Skin Mask Generator for Improving Segmentation</h4>
+                        <span> <font color="blue"> Dolby Laboratories, Inc.</font></span>
+                        <h4 class="puba">Subhadra Gopalakrishnan, <b>Trisha Mittal</b>, Jaclyn Pytlarz, Yuheng Zhao</h4>
+                        <div class="pubv">Synthetic Data for Computer Vision Workshop@ CVPR 2024</div>
+                        <div class="pubv">ISM 2024 (Oral)</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=aNztanEAAAAJ&cstart=20&pagesize=80&citation_for_view=aNztanEAAAAJ:9ZlFYXVOiuMC">Paper</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-content-6', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-content-6" class="abstract-content">
+                            <p>Skin segmentation is an important and challenging task which finds use in direct applications such as image editing and indirect downstream tasks such as face detection or hand gesture recognition. However, the availability of diverse and high-quality training data is a major challenge. Annotation of dense segmentation masks is an expensive and time consuming process. Existing skin segmentation datasets are often limited in scope: they include downstream task-specific datasets captured under controlled conditions, with limited variability in lighting, scale, ethnicity, and age. This lack of diversity in the training data can lead to poor generalization and limited performance when applied to real-world images. To address this issue, we propose a tunable generation pipeline, Synthetic Skin Mask Generator (S2MGen), which allows for the creation of a diverse range of body positions, camera angles, and lighting conditions. We explore the impact of these tunable parameters on skin segmentation performance. We also show that improvements can be made to the performance and generalizability of models trained on real world datasets, by the inclusion of synthetic data in the training pipeline.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/3massiv.png" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">3MASSIV: Multilingual, Multimodal and Multi-Aspect dataset of Social Media Short Videos</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, Uttaran Bhattacharya, Rohan Chandra, Aniket Bera, Dinesh Manocha</h4>
+                        <div class="pubv">AAAI 2023</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://openaccess.thecvf.com/content/CVPR2022/papers/Gupta_3MASSIV_Multilingual_Multimodal_and_Multi-Aspect_Dataset_of_Social_Media_Short_CVPR_2022_paper.pdf">Paper</a></li>
+                                <li><a href="https://sharechat.com/research/3massiv">Dataset</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-content-7', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-content-7" class="abstract-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-3 hidden-xs"> <img class="img-responsive" src="img/videoken.jpg" style="width: 150px;" alt=""> </div>
+                    <div class="col-sm-8">
+                        <h4 class="pubt">A Logo-Based Approach for Recognising Multiple Products on a Shelf</h4>
+                        <h4 class="puba"><b>Trisha Mittal</b>, B. Laasya, J. Dinesh Babu</h4>
+                        <div class="pubv">SAI Intellisys 2016 (Oral)</div>
+                        <div class="publ">
+                            <ul>
+                                <li><a href="https://link.springer.com/chapter/10.1007/978-3-319-56991-8_2">PDF</a></li>
+                                <li><button class="abstract-btn" onclick="toggleAbstract('abstract-content-8', this)">Abstract</button></li>
+                            </ul>
+                        </div>
+                        <div id="abstract-content-8" class="abstract-content">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this before the closing body tag -->
+    <script>
+    function showPubTheme(theme) {
+        // Hide all content
+        document.querySelectorAll('.pub-theme-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        
+        // Remove active class from all buttons
+        document.querySelectorAll('.pub-tab-btn').forEach(button => {
+            button.classList.remove('active');
+        });
+        
+        // Show selected content
+        document.getElementById(theme).classList.add('active');
+        
+        // Add active class to clicked button
+        event.target.classList.add('active');
+    }
+    </script>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js?v=1"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js?v=1"></script>
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js?v=1"></script>
+    <script src="js/cbpAnimatedHeader.js?v=1"></script>
+    <script src="js/timeline.js?v=1"></script>
+    <!-- Contact Form JavaScript -->
+    <script src="js/jqBootstrapValidation.js?v=1"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="js/freelancer.js?v=1"></script>
+</body>
+</html> 

@@ -159,11 +159,13 @@ header .intro-text .skills {
 
 }
 
+.navbar,
 .navbar-default,
 .navbar-inverse {
     border: 0;
     max-width: 100%;
     overflow-x: hidden;
+    background: #2c3e50;
 }
 
 .navbar-about-me-hidden {

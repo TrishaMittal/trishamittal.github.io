@@ -169,6 +169,27 @@ section.success hr {
     text-align: left;
 }
 
+.pub-entry .pubt {
+    margin: 0 0 6px;
+}
+
+.pub-entry .col-sm-12 > span {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.pub-entry .puba {
+    margin: 0 0 6px;
+}
+
+.pub-entry .pubv {
+    margin-bottom: 2px;
+}
+
+.pub-entry .publ {
+    padding-top: 6px;
+}
+
 /* Responsive adjustments for mobile */
 @media (max-width: 768px) {
     .pub-entry {

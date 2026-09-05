@@ -25,18 +25,6 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
-// Abstract toggle functionality
-function toggleAbstract(abstractId, buttonElement) {
-    const abstractContent = document.getElementById(abstractId);
-    if (abstractContent.classList.contains('show')) {
-        abstractContent.classList.remove('show');
-        buttonElement.classList.remove('active');
-    } else {
-        abstractContent.classList.add('show');
-        buttonElement.classList.add('active');
-    }
-}
-
 // Set active navigation item based on current page
 $(document).ready(function() {
     var currentPage = window.location.pathname.split('/').pop();

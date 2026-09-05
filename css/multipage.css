@@ -269,6 +269,21 @@ section.success hr {
     background-color: rgba(255, 255, 255, 0.2);
 } 
 
+#workshops .pubt {
+    font-size: 28px;
+}
+
+.entry-date {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+
+.entry-location {
+    font-size: 12px;
+    color: #7b8a8b;
+}
+
 /* Engagement Section Styles */
 .engagement-section-content {
     display: block;

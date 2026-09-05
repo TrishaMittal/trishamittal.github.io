@@ -138,6 +138,16 @@ section.success hr {
     line-height: 1.6;
 }
 
+.about_me a {
+    color: #18bc9c;
+}
+
+.about_me a:hover,
+.about_me a:focus {
+    color: #128f76;
+    text-decoration: underline;
+}
+
 .section-heading {
     font-size: 20px;
     font-weight: 700;

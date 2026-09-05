@@ -222,10 +222,6 @@ section.success hr {
 
 /* Engagement Section Styles */
 .engagement-section-content {
-    display: none;
-}
-
-.engagement-section-content.active {
     display: block;
 }
 

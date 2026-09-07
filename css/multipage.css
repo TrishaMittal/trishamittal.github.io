@@ -169,6 +169,10 @@ section.success hr {
     text-align: left;
 }
 
+.pubt a {
+    font-size: inherit;
+}
+
 .pub-entry .pubt {
     margin: 0 0 6px;
 }
